@@ -1,0 +1,265 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.context {
+    cursor: context-menu;
+}
+
+.tshb {
+    text-shadow: .1px .1px 2px black;
+}
+
+.tshb2 {
+    text-shadow: .1px .1px 2px rgb(0, 162, 255);
+}
+
+.tshw {
+    text-shadow: .1px .1px 2px white;
+}
+.tshg {
+    text-shadow: .1px .1px 2px green;
+}
+
+.tshy {
+    text-shadow: .1px .1px 2px orange;
+}
+
+.main {
+    padding-top: .1px;
+
+}
+
+.bshb {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.473);
+}
+
+.bshb2 {
+    box-shadow: 0px 0px 10px 0px rgba(9, 185, 255, 0.63);
+}
+
+.d-bg {
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.scroll_div {
+    overflow-y: auto;
+}
+
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg,
+            rgba(20, 167, 62, 1) 0%,
+            rgba(102, 247, 113, 1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 6px;
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.list {
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+.list:nth-child(even) {
+    background-color: rgb(236, 236, 236);
+
+}
+
+.edit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 75px;
+    height: 35px;
+    border: none;
+    padding: 0px 10px;
+    background-color: rgb(38, 78, 255);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(14, 38, 146);
+    transition-duration: .3s;
+    transform: translateY(-3px) scale(.9);
+    font-size: 18px;
+}
+
+.svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+    fill: white;
+    transition-duration: .3s;
+}
+
+.edit:hover {
+    color: transparent;
+}
+
+.edit:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+}
+
+.edit:active {
+    transform: translate(1px, 1px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
+
+
+.delete-button {
+    position: relative;
+    padding: 2px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 8px;
+    transition: transform 0.2s ease;
+}
+
+.trash-svg {
+    width: 4em;
+    height: 4em;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    overflow: visible;
+}
+
+#lid-group {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.delete-button:hover #lid-group {
+    transform: rotate(-28deg) translateY(2px);
+}
+
+.delete-button:active #lid-group {
+    transform: rotate(-12deg) scale(0.98);
+}
+
+.delete-button:hover .trash-svg {
+    transform: scale(1.08) rotate(3deg);
+}
+
+.delete-button:active .trash-svg {
+    transform: scale(0.96) rotate(-1deg);
+}
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    width: 80%;
+    position: relative;
+}
+
+.inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: grey;
+    transform: translatey(3px);
+    font-weight: bold;
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+    transform: translate( -20%, -50% ) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 2px 10px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    color: rgb(41, 109, 255);
+
+}
+
+.inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(41, 109, 255);
+}
+.floating-label {
+  position: absolute;
+  left: 0;
+  margin-left: 0.5em;
+  padding: 0.8em;
+  font-size: 100%;
+  font-weight: bold;
+  color: gray;
+  background-color: transparent;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translateY(3px);
+}
+
+select:focus + .floating-label,
+select:valid + .floating-label {
+  transform: translate(-20%, -50%) scale(0.9);
+  margin: 0;
+  margin-left: 1.3em;
+  padding: 2px 10px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  color: rgb(41, 109, 255);
+}
+
+
+@media screen and (max-width:683px) {
+    .delete-button {
+        font-size: 6px;
+    }
+
+    .edit {
+        transform: scale(.7);
+    }
+
+    .cssbuttons-io-button {
+        padding: 10px 0;
+        padding-left: 10px;
+        padding-right: 13px;
+    }
+}
+@media screen and (max-width:400px){
+    
+}
