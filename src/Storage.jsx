@@ -45,7 +45,7 @@ function Storage() {
                                 </label>
                             </div>
                             <button className=' w-[250px] sm:w-[300px] bshb active:scale-95 transition-all duration-200 ease-linear text-xl cursor-pointer hover:bg-blue-500 py-4 bg-blue-600
-                             text-white tshw mt-8 rounded-xl font-bold' onClick={add}> { is_edit ? "Update_List" : "Add_List"} </button>
+                             text-white tshw mt-8 rounded-xl font-bold' onClick={add}> { is_edit ? "Update_Expense" : "Add_Expense"} </button>
                             {/* //////////////////////////////// */}
                         </div>
                     </div>
