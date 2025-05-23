@@ -13,7 +13,7 @@ function Nav_bar() {
     return (
     <div className={`main`} >
       <div className={`w-[95%] sm:w-[90%] mx-auto mt-6 rounded-xl h-[50px] transition-all duration-300 ease-linear bshb ${darkmod ? "bg-black" : "bg-white"} flex justify-between items-center px-2 md:px-5`}>
-        <h1 className={`${darkmod ? "text-white tshw" : "text-black tshb"} transition-all duration-300 ease-linear font-bold text-lg md:text-xl flex items-center gap-2 context`}><GiTreeBranch className='text-green-600' /> Budget <span className='text-blue-600 tshb2'>Tracker</span> </h1>
+        <h1 className={`${darkmod ? "text-white tshw" : "text-black tshb"} transition-all duration-300 ease-linear font-bold text-lg md:text-xl flex items-center gap-2 context`}><GiTreeBranch className='text-green-600' /> Expense <span className='text-blue-600 tshb2'>Tracker</span> </h1>
         <ul className={`${darkmod ? "text-white tshw" : "text-black tshb"} transition-all duration-300 ease-linear hidden md:flex w-max justify-center items-center gap-5 pr-25`}>
           <li className="text-lg cursor-pointer underline text-blue-600 tshb2">Dashboard</li>
           <li className="text-lg cursor-pointer">Payment</li>
