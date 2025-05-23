@@ -61,7 +61,7 @@ function Storage() {
                         <p className={`text-sm lg:text-2xl font-bold cursor-context-menu tshw text-white `}>Amount</p>
                         <p className={`text-sm lg:text-2xl font-bold cursor-context-menu tshw text-white `}>Date</p>
                         <p className={`text-sm  hidden sm:block  lg:text-2xl font-bold cursor-context-menu tshw text-white `}>Payment Method</p>
-                        <p className={`text-smlg:text-2xl  hidden sm:block  font-bold cursor-context-menu tshw text-white `}>Reset</p>
+                        <p className={`text-sm lg:text-2xl  hidden sm:block  font-bold cursor-context-menu tshw text-white `}>Reset</p>
                     </div>
                     <div className='w-full h-[400px] scroll_div '>
                         {
