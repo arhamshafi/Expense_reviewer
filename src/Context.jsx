@@ -62,8 +62,8 @@ function Context({ children }) {
 
   let [inp_pop, setinp_pop] = useState(false)
   let [obj, setobj] = useState({ description: "", amount: "", payment_method: "" })
-  let [is_edit , setis_edit] = useState(false)
-  let [edit_index , setedit_index] = useState(null)
+  let [is_edit, setis_edit] = useState(false)
+  let [edit_index, setedit_index] = useState(null)
   let [arr, setarr] = useState(
     localStorage.getItem("expense") ? JSON.parse(localStorage.getItem("expense")) : []
   )
@@ -80,24 +80,24 @@ function Context({ children }) {
       return;
     }
     if (is_edit) {
-  let updatedArr = [...arr]; 
-  updatedArr[edit_index] = { ...obj, e_time: date }; 
-  let sorted = updatedArr.sort((a, b) => Number(b.amount) - Number(a.amount)); 
-  setarr(sorted); 
-  localStorage.setItem("expense", JSON.stringify(sorted)); 
-  setis_edit(false); 
-  setedit_index(null);
-  setinp_pop(false)
-}
-else{
+      let updatedArr = [...arr];
+      updatedArr[edit_index] = { ...obj, e_time: date };
+      let sorted = updatedArr.sort((a, b) => Number(b.amount) - Number(a.amount));
+      setarr(sorted);
+      localStorage.setItem("expense", JSON.stringify(sorted));
+      setis_edit(false);
+      setedit_index(null);
+      setinp_pop(false)
+    }
+    else {
 
-  let new_obj = { ...obj, e_time: date }
-  setinp_pop(false)
-  let update = [...arr, new_obj].sort((a, b) => Number(b.amount) - Number(a.amount));
-  setarr(update)
-  localStorage.setItem("expense", JSON.stringify(update))
-}
-setobj({ description: "", amount: "", payment_method: "" })
+      let new_obj = { ...obj, e_time: date }
+      setinp_pop(false)
+      let update = [...arr, new_obj].sort((a, b) => Number(b.amount) - Number(a.amount));
+      setarr(update)
+      localStorage.setItem("expense", JSON.stringify(update))
+    }
+    setobj({ description: "", amount: "", payment_method: "" })
   }
 
   function del(index) {
@@ -107,15 +107,15 @@ setobj({ description: "", amount: "", payment_method: "" })
 
   }
 
-  function edit_f(index , ele){
+  function edit_f(index, ele) {
     setedit_index(index)
     setinp_pop(true)
     setis_edit(true)
-    setobj({description:ele.description , amount : ele.amount , payment_method : ele.payment_method })
+    setobj({ description: ele.description, amount: ele.amount, payment_method: ele.payment_method })
   }
   let totalAmount = arr.reduce((acc, curr) => acc + Number(curr.amount), 0);
 
-  
+
 
   return (
     <Appcontext.Provider value={{

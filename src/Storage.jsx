@@ -52,7 +52,7 @@ function Storage() {
                 )
             }
 
-            <div className={`px-1 py-2 sm:p-4 w-[90%] sm:w-[90%] mx-auto flex flex-wrap justify-center items-center transition-all duration-300 ease-linear rounded-2xl ${darkmod ? "bg-black bshb" : "bg-white bshb"} `}>
+            <div className={`px-1 st py-2 sm:p-4 w-[90%] sm:w-[90%] mx-auto flex flex-wrap justify-center items-center transition-all duration-300 ease-linear rounded-2xl ${darkmod ? "bg-black bshb" : "bg-white bshb"} `}>
                 <div className='w-[20%] h-max py-8 lg:h-[300px] flex justify-center items-center'> <Animation /> </div>
                 {/* /////////////////////////////// */}
                 <div className='w-full lg:w-[80%] '>

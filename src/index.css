@@ -245,6 +245,94 @@ select:valid + .floating-label {
 }
 
 
+.dis_1{
+    animation: dis_1 1s ease-out .3s forwards;
+    transform: scale(.8);
+    opacity: 0;
+}
+@keyframes dis_1{
+    from{
+        transform: scale(.8);
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.temp{
+    transform: translateX(-100%);
+    animation: temp .8s ease-out .5s forwards ;
+    opacity: 0;
+}
+@keyframes temp{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.calender_anime{
+    transform: translateX(100%);
+    animation: calender_anime .8s ease-out .5s forwards ;
+    opacity: 0;
+}
+@keyframes calender_anime{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.drk_anime{
+    transform: translateY(50%);
+    animation: drk_anime 1s ease-out .5s forwards ;
+    opacity: 0;
+}
+@keyframes drk_anime{
+    from{
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.st{
+    transform: scale(.7);
+    animation: st 1s ease-out 1s forwards ;
+    opacity: 0;
+}
+@keyframes st{
+    from{
+        transform: scale(.8);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.nav_anime{
+    transform: translateY(-100%);
+    animation: nav_anime 1s ease-out .5s forwards ;
+    opacity: 0;
+}
+@keyframes nav_anime{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 @media screen and (max-width:683px) {
     .delete-button {
         font-size: 6px;
